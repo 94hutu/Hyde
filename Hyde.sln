@@ -1,7 +1,7 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio 14
-VisualStudioVersion = 14.0.23107.0
+VisualStudioVersion = 14.0.24720.0
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Hyde.Domain", "Hyde.Domain\Hyde.Domain.csproj", "{98832D1F-AC7A-4829-B33A-ACF415C8CEAC}"
 EndProject
@@ -24,6 +24,8 @@ EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Hyde.Result", "Hyde.Result\Hyde.Result.csproj", "{9CC3F2AF-88EB-41D8-9AA5-E10189C9B346}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Hyde.Service", "Hyde.Service\Hyde.Service.csproj", "{670FD51B-7D33-4CB3-BDEE-4D8325863B30}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Hyde.Web", "Hyde.Web\Hyde.Web.csproj", "{A11EB12B-6119-4EA0-9AA1-AC37047580FE}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -75,6 +77,10 @@ Global
 		{670FD51B-7D33-4CB3-BDEE-4D8325863B30}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{670FD51B-7D33-4CB3-BDEE-4D8325863B30}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{670FD51B-7D33-4CB3-BDEE-4D8325863B30}.Release|Any CPU.Build.0 = Release|Any CPU
+		{A11EB12B-6119-4EA0-9AA1-AC37047580FE}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{A11EB12B-6119-4EA0-9AA1-AC37047580FE}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{A11EB12B-6119-4EA0-9AA1-AC37047580FE}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{A11EB12B-6119-4EA0-9AA1-AC37047580FE}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

@@ -1,0 +1,597 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="12.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="..\packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.1.0.0\build\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.props" Condition="Exists('..\packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.1.0.0\build\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.props')" />
+  <Import Project="..\packages\Microsoft.Net.Compilers.1.0.0\build\Microsoft.Net.Compilers.props" Condition="Exists('..\packages\Microsoft.Net.Compilers.1.0.0\build\Microsoft.Net.Compilers.props')" />
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>
+    </ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{A11EB12B-6119-4EA0-9AA1-AC37047580FE}</ProjectGuid>
+    <ProjectTypeGuids>{349c5851-65df-11da-9384-00065b846f21};{fae04ec0-301f-11d3-bf4b-00c04f79efbc}</ProjectTypeGuids>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>Hyde.Web</RootNamespace>
+    <AssemblyName>Hyde.Web</AssemblyName>
+    <TargetFrameworkVersion>v4.6</TargetFrameworkVersion>
+    <UseIISExpress>true</UseIISExpress>
+    <IISExpressSSLPort />
+    <IISExpressAnonymousAuthentication />
+    <IISExpressWindowsAuthentication />
+    <IISExpressUseClassicPipelineMode />
+    <UseGlobalApplicationHostFile />
+    <NuGetPackageImportStamp>
+    </NuGetPackageImportStamp>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="System.Web.DynamicData" />
+    <Reference Include="System.Web.Entity" />
+    <Reference Include="System.Web.ApplicationServices" />
+    <Reference Include="System" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="System.Web.Extensions" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Web" />
+    <Reference Include="System.Configuration" />
+    <Reference Include="System.Web.Services" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="index.html" />
+    <Content Include="lib\artDialog4.1.7\artDialog.js" />
+    <Content Include="lib\artDialog4.1.7\artDialog.source.js" />
+    <Content Include="lib\artDialog4.1.7\index.html" />
+    <Content Include="lib\artDialog4.1.7\jquery.artDialog.js" />
+    <Content Include="lib\artDialog4.1.7\jquery.artDialog.source.js" />
+    <Content Include="lib\artDialog4.1.7\license.txt" />
+    <Content Include="lib\artDialog4.1.7\plugins\iframeTools.js" />
+    <Content Include="lib\artDialog4.1.7\plugins\iframeTools.source.js" />
+    <Content Include="lib\artDialog4.1.7\skins\aero.css" />
+    <Content Include="lib\artDialog4.1.7\skins\aero\aero_s.png" />
+    <Content Include="lib\artDialog4.1.7\skins\aero\aero_s2.png" />
+    <Content Include="lib\artDialog4.1.7\skins\aero\ie6\aui_close.hover.png" />
+    <Content Include="lib\artDialog4.1.7\skins\aero\ie6\aui_close.png" />
+    <Content Include="lib\artDialog4.1.7\skins\aero\ie6\aui_e.png" />
+    <Content Include="lib\artDialog4.1.7\skins\aero\ie6\aui_n.png" />
+    <Content Include="lib\artDialog4.1.7\skins\aero\ie6\aui_ne.png" />
+    <Content Include="lib\artDialog4.1.7\skins\aero\ie6\aui_nw.png" />
+    <Content Include="lib\artDialog4.1.7\skins\aero\ie6\aui_s.png" />
+    <Content Include="lib\artDialog4.1.7\skins\aero\ie6\aui_se.png" />
+    <Content Include="lib\artDialog4.1.7\skins\aero\ie6\aui_sw.png" />
+    <Content Include="lib\artDialog4.1.7\skins\aero\ie6\aui_title_icon.png" />
+    <Content Include="lib\artDialog4.1.7\skins\aero\ie6\aui_w.png" />
+    <Content Include="lib\artDialog4.1.7\skins\black.css" />
+    <Content Include="lib\artDialog4.1.7\skins\black\bg.png" />
+    <Content Include="lib\artDialog4.1.7\skins\black\bg2.png" />
+    <Content Include="lib\artDialog4.1.7\skins\black\bg_css3.png" />
+    <Content Include="lib\artDialog4.1.7\skins\black\bg_css3_2.png" />
+    <Content Include="lib\artDialog4.1.7\skins\black\ie6\close.hover.png" />
+    <Content Include="lib\artDialog4.1.7\skins\black\ie6\close.png" />
+    <Content Include="lib\artDialog4.1.7\skins\black\ie6\e.png" />
+    <Content Include="lib\artDialog4.1.7\skins\black\ie6\n.png" />
+    <Content Include="lib\artDialog4.1.7\skins\black\ie6\ne.png" />
+    <Content Include="lib\artDialog4.1.7\skins\black\ie6\nw.png" />
+    <Content Include="lib\artDialog4.1.7\skins\black\ie6\s.png" />
+    <Content Include="lib\artDialog4.1.7\skins\black\ie6\se.png" />
+    <Content Include="lib\artDialog4.1.7\skins\black\ie6\sw.png" />
+    <Content Include="lib\artDialog4.1.7\skins\black\ie6\w.png" />
+    <Content Include="lib\artDialog4.1.7\skins\blue.css" />
+    <Content Include="lib\artDialog4.1.7\skins\blue\bg.png" />
+    <Content Include="lib\artDialog4.1.7\skins\blue\bg2.png" />
+    <Content Include="lib\artDialog4.1.7\skins\blue\bg_css3.png" />
+    <Content Include="lib\artDialog4.1.7\skins\blue\bg_css3_2.png" />
+    <Content Include="lib\artDialog4.1.7\skins\blue\ie6\close.hover.png" />
+    <Content Include="lib\artDialog4.1.7\skins\blue\ie6\close.png" />
+    <Content Include="lib\artDialog4.1.7\skins\blue\ie6\e.png" />
+    <Content Include="lib\artDialog4.1.7\skins\blue\ie6\n.png" />
+    <Content Include="lib\artDialog4.1.7\skins\blue\ie6\ne.png" />
+    <Content Include="lib\artDialog4.1.7\skins\blue\ie6\nw.png" />
+    <Content Include="lib\artDialog4.1.7\skins\blue\ie6\s.png" />
+    <Content Include="lib\artDialog4.1.7\skins\blue\ie6\se.png" />
+    <Content Include="lib\artDialog4.1.7\skins\blue\ie6\sw.png" />
+    <Content Include="lib\artDialog4.1.7\skins\blue\ie6\w.png" />
+    <Content Include="lib\artDialog4.1.7\skins\chrome.css" />
+    <Content Include="lib\artDialog4.1.7\skins\chrome\border.png" />
+    <Content Include="lib\artDialog4.1.7\skins\chrome\chrome_s.png" />
+    <Content Include="lib\artDialog4.1.7\skins\default.css" />
+    <Content Include="lib\artDialog4.1.7\skins\green.css" />
+    <Content Include="lib\artDialog4.1.7\skins\green\bg.png" />
+    <Content Include="lib\artDialog4.1.7\skins\green\bg2.png" />
+    <Content Include="lib\artDialog4.1.7\skins\green\bg_css3.png" />
+    <Content Include="lib\artDialog4.1.7\skins\green\bg_css3_2.png" />
+    <Content Include="lib\artDialog4.1.7\skins\green\color_bg.png" />
+    <Content Include="lib\artDialog4.1.7\skins\green\ie6\close.hover.png" />
+    <Content Include="lib\artDialog4.1.7\skins\green\ie6\close.png" />
+    <Content Include="lib\artDialog4.1.7\skins\green\ie6\e.png" />
+    <Content Include="lib\artDialog4.1.7\skins\green\ie6\n.png" />
+    <Content Include="lib\artDialog4.1.7\skins\green\ie6\ne.png" />
+    <Content Include="lib\artDialog4.1.7\skins\green\ie6\nw.png" />
+    <Content Include="lib\artDialog4.1.7\skins\green\ie6\s.png" />
+    <Content Include="lib\artDialog4.1.7\skins\green\ie6\se.png" />
+    <Content Include="lib\artDialog4.1.7\skins\green\ie6\sw.png" />
+    <Content Include="lib\artDialog4.1.7\skins\green\ie6\w.png" />
+    <Content Include="lib\artDialog4.1.7\skins\icons\error.png" />
+    <Content Include="lib\artDialog4.1.7\skins\icons\face-sad.png" />
+    <Content Include="lib\artDialog4.1.7\skins\icons\face-smile.png" />
+    <Content Include="lib\artDialog4.1.7\skins\icons\loading.gif" />
+    <Content Include="lib\artDialog4.1.7\skins\icons\question.png" />
+    <Content Include="lib\artDialog4.1.7\skins\icons\succeed.png" />
+    <Content Include="lib\artDialog4.1.7\skins\icons\warning.png" />
+    <Content Include="lib\artDialog4.1.7\skins\idialog.css" />
+    <Content Include="lib\artDialog4.1.7\skins\idialog\idialog_s.png" />
+    <Content Include="lib\artDialog4.1.7\skins\idialog\idialog_s2.png" />
+    <Content Include="lib\artDialog4.1.7\skins\idialog\ie6\aui_close.hover.png" />
+    <Content Include="lib\artDialog4.1.7\skins\idialog\ie6\aui_close.png" />
+    <Content Include="lib\artDialog4.1.7\skins\idialog\ie6\aui_e.png" />
+    <Content Include="lib\artDialog4.1.7\skins\idialog\ie6\aui_n.png" />
+    <Content Include="lib\artDialog4.1.7\skins\idialog\ie6\aui_ne.png" />
+    <Content Include="lib\artDialog4.1.7\skins\idialog\ie6\aui_nw.png" />
+    <Content Include="lib\artDialog4.1.7\skins\idialog\ie6\aui_s.png" />
+    <Content Include="lib\artDialog4.1.7\skins\idialog\ie6\aui_se.png" />
+    <Content Include="lib\artDialog4.1.7\skins\idialog\ie6\aui_sw.png" />
+    <Content Include="lib\artDialog4.1.7\skins\idialog\ie6\aui_w.png" />
+    <Content Include="lib\artDialog4.1.7\skins\opera.css" />
+    <Content Include="lib\artDialog4.1.7\skins\opera\ie6\aui_close.hover.png" />
+    <Content Include="lib\artDialog4.1.7\skins\opera\ie6\aui_close.png" />
+    <Content Include="lib\artDialog4.1.7\skins\opera\ie6\aui_e.png" />
+    <Content Include="lib\artDialog4.1.7\skins\opera\ie6\aui_n.png" />
+    <Content Include="lib\artDialog4.1.7\skins\opera\ie6\aui_ne.png" />
+    <Content Include="lib\artDialog4.1.7\skins\opera\ie6\aui_nw.png" />
+    <Content Include="lib\artDialog4.1.7\skins\opera\ie6\aui_s.png" />
+    <Content Include="lib\artDialog4.1.7\skins\opera\ie6\aui_se.png" />
+    <Content Include="lib\artDialog4.1.7\skins\opera\ie6\aui_sw.png" />
+    <Content Include="lib\artDialog4.1.7\skins\opera\ie6\aui_w.png" />
+    <Content Include="lib\artDialog4.1.7\skins\opera\s1.png" />
+    <Content Include="lib\artDialog4.1.7\skins\opera\s2.png" />
+    <Content Include="lib\artDialog4.1.7\skins\simple.css" />
+    <Content Include="lib\artDialog4.1.7\skins\twitter.css" />
+    <Content Include="lib\artDialog4.1.7\_doc\ajaxContent\content.html" />
+    <Content Include="lib\artDialog4.1.7\_doc\ajaxContent\googleMaps.html" />
+    <Content Include="lib\artDialog4.1.7\_doc\ajaxContent\login.html" />
+    <Content Include="lib\artDialog4.1.7\_doc\API.html" />
+    <Content Include="lib\artDialog4.1.7\_doc\demo.css" />
+    <Content Include="lib\artDialog4.1.7\_doc\demo.js" />
+    <Content Include="lib\artDialog4.1.7\_doc\down.html" />
+    <Content Include="lib\artDialog4.1.7\_doc\frameset.html" />
+    <Content Include="lib\artDialog4.1.7\_doc\googleMaps.html" />
+    <Content Include="lib\artDialog4.1.7\_doc\helloWorld.html" />
+    <Content Include="lib\artDialog4.1.7\_doc\highlight\AUTHORS.en.txt" />
+    <Content Include="lib\artDialog4.1.7\_doc\highlight\export.html" />
+    <Content Include="lib\artDialog4.1.7\_doc\highlight\highlight.js" />
+    <Content Include="lib\artDialog4.1.7\_doc\highlight\highlight.pack.js" />
+    <Content Include="lib\artDialog4.1.7\_doc\highlight\languages\javascript.js" />
+    <Content Include="lib\artDialog4.1.7\_doc\highlight\readme.eng.txt" />
+    <Content Include="lib\artDialog4.1.7\_doc\highlight\styles\magula.css" />
+    <Content Include="lib\artDialog4.1.7\_doc\highlight\test.html" />
+    <Content Include="lib\artDialog4.1.7\_doc\iframe.html" />
+    <Content Include="lib\artDialog4.1.7\_doc\iframeA.html" />
+    <Content Include="lib\artDialog4.1.7\_doc\iframeB.html" />
+    <Content Include="lib\artDialog4.1.7\_doc\iframeTop.html" />
+    <Content Include="lib\artDialog4.1.7\_doc\iframe_frameset.html" />
+    <Content Include="lib\artDialog4.1.7\_doc\images\alipay.jpg" />
+    <Content Include="lib\artDialog4.1.7\_doc\images\bg.png" />
+    <Content Include="lib\artDialog4.1.7\_doc\images\bottom.png" />
+    <Content Include="lib\artDialog4.1.7\_doc\images\doc.png" />
+    <Content Include="lib\artDialog4.1.7\_doc\images\lixiaolong.png" />
+    <Content Include="lib\artDialog4.1.7\_doc\images\logo.png" />
+    <Content Include="lib\artDialog4.1.7\_doc\images\opensource.gif" />
+    <Content Include="lib\artDialog4.1.7\_doc\images\photo.jpg" />
+    <Content Include="lib\artDialog4.1.7\_doc\images\text.png" />
+    <Content Include="lib\artDialog4.1.7\_doc\labs.html" />
+    <Content Include="lib\artDialog4.1.7\_doc\license.html" />
+    <Content Include="lib\artDialog4.1.7\_doc\log.html" />
+    <Content Include="lib\artDialog4.1.7\_doc\login_iframe.html" />
+    <Content Include="lib\artDialog4.1.7\_doc\login_iframe_2.html" />
+    <Content Include="lib\artDialog4.1.7\_doc\new.html" />
+    <Content Include="lib\artDialog4.1.7\_doc\plugin.iframe.html" />
+    <Content Include="lib\artDialog4.1.7\_doc\topFrame.html" />
+    <Content Include="lib\artDialog4.1.7\_doc\upd.txt" />
+    <Content Include="js\dist\css\bootstrap-theme.css.map" />
+    <Content Include="js\dist\css\bootstrap.css.map" />
+    <Content Include="js\dist\fonts\glyphicons-halflings-regular.eot" />
+    <Content Include="js\dist\fonts\glyphicons-halflings-regular.ttf" />
+    <Content Include="js\dist\fonts\glyphicons-halflings-regular.woff" />
+    <Content Include="js\dist\fonts\glyphicons-halflings-regular.woff2" />
+    <Content Include="lib\jPaginate\smartpaginator.css" />
+    <Content Include="lib\jPaginate\smartpaginator.js" />
+    <Content Include="js\login.js" />
+    <Content Include="lib\ueditor\net\getContent.ashx" />
+    <Content Include="lib\ueditor\third-party\mathquill\font\stixgeneral-bundle\stixgeneral-webfont.eot" />
+    <Content Include="lib\ueditor\third-party\mathquill\font\stixgeneral-bundle\stixgeneral-webfont.ttf" />
+    <Content Include="lib\ueditor\third-party\mathquill\font\stixgeneral-bundle\stixgeneral-webfont.woff" />
+    <Content Include="lib\ueditor\third-party\mathquill\font\stixgeneral-bundle\stixgeneralbol-webfont.eot" />
+    <Content Include="lib\ueditor\third-party\mathquill\font\stixgeneral-bundle\stixgeneralbol-webfont.ttf" />
+    <Content Include="lib\ueditor\third-party\mathquill\font\stixgeneral-bundle\stixgeneralbol-webfont.woff" />
+    <Content Include="lib\ueditor\third-party\mathquill\font\stixgeneral-bundle\stixgeneralbolita-webfont.eot" />
+    <Content Include="lib\ueditor\third-party\mathquill\font\stixgeneral-bundle\stixgeneralbolita-webfont.ttf" />
+    <Content Include="lib\ueditor\third-party\mathquill\font\stixgeneral-bundle\stixgeneralbolita-webfont.woff" />
+    <Content Include="lib\ueditor\third-party\mathquill\font\stixgeneral-bundle\stixgeneralitalic-webfont.eot" />
+    <Content Include="lib\ueditor\third-party\mathquill\font\stixgeneral-bundle\stixgeneralitalic-webfont.ttf" />
+    <Content Include="lib\ueditor\third-party\mathquill\font\stixgeneral-bundle\stixgeneralitalic-webfont.woff" />
+    <Content Include="lib\ueditor\third-party\mathquill\font\Symbola.eot" />
+    <Content Include="lib\ueditor\third-party\mathquill\font\Symbola.otf" />
+    <Content Include="lib\ueditor\third-party\mathquill\font\Symbola.ttf" />
+    <Content Include="lib\ueditor\third-party\mathquill\font\Symbola.woff" />
+    <Content Include="lib\ueditor\net\ImageUpHandler.ashx" />
+    <Content Include="lib\artDialog4.1.7\_doc\ajaxContent\content.json" />
+    <Content Include="lib\artDialog4.1.7\_doc\commercial_license.doc" />
+    <Content Include="lib\artDialog4.1.7\_doc\highlight\LICENSE" />
+    <Content Include="lib\.DS_Store" />
+    <Content Include="lib\font-awesome\docs\assets\font\fontawesome-webfont.eot" />
+    <Content Include="lib\font-awesome\docs\assets\font\fontawesome-webfont.ttf" />
+    <Content Include="lib\font-awesome\docs\assets\font\fontawesome-webfont.woff" />
+    <Content Include="lib\font-awesome\docs\assets\font\museo_slab_300-webfont.eot" />
+    <Content Include="lib\font-awesome\docs\assets\font\museo_slab_300-webfont.ttf" />
+    <Content Include="lib\font-awesome\docs\assets\font\museo_slab_500-webfont.eot" />
+    <Content Include="lib\font-awesome\docs\assets\font\museo_slab_500-webfont.ttf" />
+    <Content Include="lib\font-awesome\docs\assets\font\proximanova-webfont.eot" />
+    <Content Include="lib\font-awesome\docs\assets\font\proximanova-webfont.ttf" />
+    <Content Include="lib\font-awesome\docs\assets\less\font-awesome-ie7.less" />
+    <Content Include="lib\font-awesome\docs\assets\less\font-awesome.less" />
+    <Content Include="lib\font-awesome\docs\assets\less\font-site.less" />
+    <Content Include="lib\font-awesome\docs\assets\less\mixins.less" />
+    <Content Include="lib\font-awesome\docs\assets\less\site.less" />
+    <Content Include="lib\font-awesome\docs\assets\less\twbs-203\accordion.less" />
+    <Content Include="lib\font-awesome\docs\assets\less\twbs-203\alerts.less" />
+    <Content Include="lib\font-awesome\docs\assets\less\twbs-203\bootstrap.less" />
+    <Content Include="lib\font-awesome\docs\assets\less\twbs-203\breadcrumbs.less" />
+    <Content Include="lib\font-awesome\docs\assets\less\twbs-203\button-groups.less" />
+    <Content Include="lib\font-awesome\docs\assets\less\twbs-203\buttons.less" />
+    <Content Include="lib\font-awesome\docs\assets\less\twbs-203\carousel.less" />
+    <Content Include="lib\font-awesome\docs\assets\less\twbs-203\close.less" />
+    <Content Include="lib\font-awesome\docs\assets\less\twbs-203\code.less" />
+    <Content Include="lib\font-awesome\docs\assets\less\twbs-203\component-animations.less" />
+    <Content Include="lib\font-awesome\docs\assets\less\twbs-203\dropdowns.less" />
+    <Content Include="lib\font-awesome\docs\assets\less\twbs-203\forms.less" />
+    <Content Include="lib\font-awesome\docs\assets\less\twbs-203\grid.less" />
+    <Content Include="lib\font-awesome\docs\assets\less\twbs-203\hero-unit.less" />
+    <Content Include="lib\font-awesome\docs\assets\less\twbs-203\labels-badges.less" />
+    <Content Include="lib\font-awesome\docs\assets\less\twbs-203\layouts.less" />
+    <Content Include="lib\font-awesome\docs\assets\less\twbs-203\mixins.less" />
+    <Content Include="lib\font-awesome\docs\assets\less\twbs-203\modals.less" />
+    <Content Include="lib\font-awesome\docs\assets\less\twbs-203\navbar.less" />
+    <Content Include="lib\font-awesome\docs\assets\less\twbs-203\navs.less" />
+    <Content Include="lib\font-awesome\docs\assets\less\twbs-203\pager.less" />
+    <Content Include="lib\font-awesome\docs\assets\less\twbs-203\pagination.less" />
+    <Content Include="lib\font-awesome\docs\assets\less\twbs-203\popovers.less" />
+    <Content Include="lib\font-awesome\docs\assets\less\twbs-203\progress-bars.less" />
+    <Content Include="lib\font-awesome\docs\assets\less\twbs-203\reset.less" />
+    <Content Include="lib\font-awesome\docs\assets\less\twbs-203\responsive-1200px-min.less" />
+    <Content Include="lib\font-awesome\docs\assets\less\twbs-203\responsive-767px-max.less" />
+    <Content Include="lib\font-awesome\docs\assets\less\twbs-203\responsive-768px-979px.less" />
+    <Content Include="lib\font-awesome\docs\assets\less\twbs-203\responsive-navbar.less" />
+    <Content Include="lib\font-awesome\docs\assets\less\twbs-203\responsive-utilities.less" />
+    <Content Include="lib\font-awesome\docs\assets\less\twbs-203\responsive.less" />
+    <Content Include="lib\font-awesome\docs\assets\less\twbs-203\scaffolding.less" />
+    <Content Include="lib\font-awesome\docs\assets\less\twbs-203\sprites.less" />
+    <Content Include="lib\font-awesome\docs\assets\less\twbs-203\tables.less" />
+    <Content Include="lib\font-awesome\docs\assets\less\twbs-203\thumbnails.less" />
+    <Content Include="lib\font-awesome\docs\assets\less\twbs-203\tooltip.less" />
+    <Content Include="lib\font-awesome\docs\assets\less\twbs-203\type.less" />
+    <Content Include="lib\font-awesome\docs\assets\less\twbs-203\utilities.less" />
+    <Content Include="lib\font-awesome\docs\assets\less\twbs-203\variables.less" />
+    <Content Include="lib\font-awesome\docs\assets\less\twbs-203\wells.less" />
+    <Content Include="lib\font-awesome\docs\assets\less\variables.less" />
+    <Content Include="lib\font-awesome\FontAwesome-Vectors.pdf" />
+    <Content Include="lib\font-awesome\FontAwesome.ttf" />
+    <Content Include="lib\font-awesome\font\fontawesome-webfont.eot" />
+    <Content Include="lib\font-awesome\font\fontawesome-webfont.ttf" />
+    <Content Include="lib\font-awesome\font\fontawesome-webfont.woff" />
+    <Content Include="lib\font-awesome\less\font-awesome-ie7.less" />
+    <Content Include="lib\font-awesome\less\font-awesome.less" />
+    <Content Include="lib\font-awesome\README.md" />
+    <Content Include="lib\font-awesome\sass\font-awesome.sass" />
+    <Content Include="lib\font-awesome\sass\font-awesome.scss" />
+    <Content Include="lib\fullcalendar-1.5.3\demos\json-events.php" />
+    <None Include="Web.Debug.config">
+      <DependentUpon>Web.config</DependentUpon>
+    </None>
+    <None Include="Web.Release.config">
+      <DependentUpon>Web.config</DependentUpon>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="css\dashboard\dashboard.css" />
+    <Content Include="editTest.html" />
+    <Content Include="index1.html" />
+    <Content Include="css\signin\signin.css" />
+    <Content Include="js\dist\css\bootstrap-theme.css" />
+    <Content Include="js\dist\css\bootstrap-theme.min.css" />
+    <Content Include="js\dist\css\bootstrap.css" />
+    <Content Include="js\dist\css\bootstrap.min.css" />
+    <Content Include="js\dist\fonts\glyphicons-halflings-regular.svg" />
+    <Content Include="js\dist\js\bootstrap.js" />
+    <Content Include="js\dist\js\bootstrap.min.js" />
+    <Content Include="js\dist\js\npm.js" />
+    <Content Include="lib\jquery-1.11.3.js" />
+    <Content Include="lib\jquery-1.11.3.min.js" />
+    <Content Include="lib\ueditor\adapter\adapter.js" />
+    <Content Include="lib\ueditor\adapter\autofloat.js" />
+    <Content Include="lib\ueditor\adapter\button.js" />
+    <Content Include="lib\ueditor\adapter\combobox.js" />
+    <Content Include="lib\ueditor\adapter\dialog.js" />
+    <Content Include="lib\ueditor\adapter\fullscreen.js" />
+    <Content Include="lib\ueditor\adapter\imagescale.js" />
+    <Content Include="lib\ueditor\adapter\popup.js" />
+    <Content Include="lib\ueditor\adapter\source.js" />
+    <Content Include="lib\ueditor\core\browser.js" />
+    <Content Include="lib\ueditor\core\domUtils.js" />
+    <Content Include="lib\ueditor\core\dtd.js" />
+    <Content Include="lib\ueditor\core\Editor.js" />
+    <Content Include="lib\ueditor\core\EventBase.js" />
+    <Content Include="lib\ueditor\core\filternode.js" />
+    <Content Include="lib\ueditor\core\filterword.js" />
+    <Content Include="lib\ueditor\core\htmlparser.js" />
+    <Content Include="lib\ueditor\core\node.js" />
+    <Content Include="lib\ueditor\core\Range.js" />
+    <Content Include="lib\ueditor\core\Selection.js" />
+    <Content Include="lib\ueditor\core\utils.js" />
+    <Content Include="lib\ueditor\dialogs\emotion\emotion.css" />
+    <Content Include="lib\ueditor\dialogs\emotion\emotion.js" />
+    <Content Include="lib\ueditor\dialogs\emotion\images\0.gif" />
+    <Content Include="lib\ueditor\dialogs\emotion\images\bface.gif" />
+    <Content Include="lib\ueditor\dialogs\emotion\images\cface.gif" />
+    <Content Include="lib\ueditor\dialogs\emotion\images\fface.gif" />
+    <Content Include="lib\ueditor\dialogs\emotion\images\jxface2.gif" />
+    <Content Include="lib\ueditor\dialogs\emotion\images\neweditor-tab-bg.png" />
+    <Content Include="lib\ueditor\dialogs\emotion\images\tface.gif" />
+    <Content Include="lib\ueditor\dialogs\emotion\images\wface.gif" />
+    <Content Include="lib\ueditor\dialogs\emotion\images\yface.gif" />
+    <Content Include="lib\ueditor\dialogs\formula\formula.css" />
+    <Content Include="lib\ueditor\dialogs\formula\formula.html" />
+    <Content Include="lib\ueditor\dialogs\formula\formula.js" />
+    <Content Include="lib\ueditor\dialogs\formula\images\formula.png" />
+    <Content Include="lib\ueditor\dialogs\image\image.css" />
+    <Content Include="lib\ueditor\dialogs\image\image.js" />
+    <Content Include="lib\ueditor\dialogs\image\images\close.png" />
+    <Content Include="lib\ueditor\dialogs\image\images\upload1.png" />
+    <Content Include="lib\ueditor\dialogs\image\images\upload2.png" />
+    <Content Include="lib\ueditor\dialogs\link\link.js" />
+    <Content Include="lib\ueditor\dialogs\map\map.html" />
+    <Content Include="lib\ueditor\dialogs\map\map.js" />
+    <Content Include="lib\ueditor\dialogs\video\images\center_focus.jpg" />
+    <Content Include="lib\ueditor\dialogs\video\images\left_focus.jpg" />
+    <Content Include="lib\ueditor\dialogs\video\images\none_focus.jpg" />
+    <Content Include="lib\ueditor\dialogs\video\images\right_focus.jpg" />
+    <Content Include="lib\ueditor\dialogs\video\video.css" />
+    <Content Include="lib\ueditor\dialogs\video\video.js" />
+    <Content Include="lib\ueditor\editor.js" />
+    <Content Include="lib\ueditor\editor_api.js" />
+    <Content Include="lib\ueditor\lang\en\en.js" />
+    <Content Include="lib\ueditor\lang\en\images\addimage.png" />
+    <Content Include="lib\ueditor\lang\en\images\alldeletebtnhoverskin.png" />
+    <Content Include="lib\ueditor\lang\en\images\alldeletebtnupskin.png" />
+    <Content Include="lib\ueditor\lang\en\images\background.png" />
+    <Content Include="lib\ueditor\lang\en\images\button.png" />
+    <Content Include="lib\ueditor\lang\en\images\copy.png" />
+    <Content Include="lib\ueditor\lang\en\images\deletedisable.png" />
+    <Content Include="lib\ueditor\lang\en\images\deleteenable.png" />
+    <Content Include="lib\ueditor\lang\en\images\imglabel.png" />
+    <Content Include="lib\ueditor\lang\en\images\listbackground.png" />
+    <Content Include="lib\ueditor\lang\en\images\localimage.png" />
+    <Content Include="lib\ueditor\lang\en\images\music.png" />
+    <Content Include="lib\ueditor\lang\en\images\rotateleftdisable.png" />
+    <Content Include="lib\ueditor\lang\en\images\rotateleftenable.png" />
+    <Content Include="lib\ueditor\lang\en\images\rotaterightdisable.png" />
+    <Content Include="lib\ueditor\lang\en\images\rotaterightenable.png" />
+    <Content Include="lib\ueditor\lang\en\images\upload.png" />
+    <Content Include="lib\ueditor\lang\zh-cn\images\copy.png" />
+    <Content Include="lib\ueditor\lang\zh-cn\images\imglabel.png" />
+    <Content Include="lib\ueditor\lang\zh-cn\images\localimage.png" />
+    <Content Include="lib\ueditor\lang\zh-cn\images\music.png" />
+    <Content Include="lib\ueditor\lang\zh-cn\images\upload.png" />
+    <Content Include="lib\ueditor\lang\zh-cn\zh-cn.js" />
+    <Content Include="lib\ueditor\plugins\autosave.js" />
+    <Content Include="lib\ueditor\plugins\autoupload.js" />
+    <Content Include="lib\ueditor\plugins\basestyle.js" />
+    <Content Include="lib\ueditor\plugins\cleardoc.js" />
+    <Content Include="lib\ueditor\plugins\enterkey.js" />
+    <Content Include="lib\ueditor\plugins\font.js" />
+    <Content Include="lib\ueditor\plugins\formula.js" />
+    <Content Include="lib\ueditor\plugins\horizontal.js" />
+    <Content Include="lib\ueditor\plugins\image.js" />
+    <Content Include="lib\ueditor\plugins\inserthtml.js" />
+    <Content Include="lib\ueditor\plugins\justify.js" />
+    <Content Include="lib\ueditor\plugins\keystrokes.js" />
+    <Content Include="lib\ueditor\plugins\link.js" />
+    <Content Include="lib\ueditor\plugins\list.js" />
+    <Content Include="lib\ueditor\plugins\paragraph.js" />
+    <Content Include="lib\ueditor\plugins\paste.js" />
+    <Content Include="lib\ueditor\plugins\preview.js" />
+    <Content Include="lib\ueditor\plugins\print.js" />
+    <Content Include="lib\ueditor\plugins\removeformat.js" />
+    <Content Include="lib\ueditor\plugins\selectall.js" />
+    <Content Include="lib\ueditor\plugins\source.js" />
+    <Content Include="lib\ueditor\plugins\undo.js" />
+    <Content Include="lib\ueditor\plugins\video.js" />
+    <Content Include="lib\ueditor\themes\default\images\caret.png" />
+    <Content Include="lib\ueditor\themes\default\images\close.png" />
+    <Content Include="lib\ueditor\themes\default\images\icons.gif" />
+    <Content Include="lib\ueditor\themes\default\images\icons.png" />
+    <Content Include="lib\ueditor\themes\default\images\ok.gif" />
+    <Content Include="lib\ueditor\themes\default\images\pop-bg.png" />
+    <Content Include="lib\ueditor\themes\default\images\spacer.gif" />
+    <Content Include="lib\ueditor\themes\default\images\videologo.gif" />
+    <Content Include="lib\ueditor\themes\default\_css\button.css" />
+    <Content Include="lib\ueditor\themes\default\_css\buttonicon.css" />
+    <Content Include="lib\ueditor\themes\default\_css\colorpicker.css" />
+    <Content Include="lib\ueditor\themes\default\_css\combobox.css" />
+    <Content Include="lib\ueditor\themes\default\_css\comboboxmenu.css" />
+    <Content Include="lib\ueditor\themes\default\_css\dialog.css" />
+    <Content Include="lib\ueditor\themes\default\_css\dialogsize.css" />
+    <Content Include="lib\ueditor\themes\default\_css\editor.css" />
+    <Content Include="lib\ueditor\themes\default\_css\popup.css" />
+    <Content Include="lib\ueditor\themes\default\_css\separator.css" />
+    <Content Include="lib\ueditor\themes\default\_css\splitbutton.css" />
+    <Content Include="lib\ueditor\themes\default\_css\tab.css" />
+    <Content Include="lib\ueditor\themes\default\_css\tooltip.css" />
+    <Content Include="lib\ueditor\themes\default\_css\umeditor.css" />
+    <Content Include="lib\ueditor\third-party\jquery.min.js" />
+    <Content Include="lib\ueditor\third-party\mathquill\font\stixgeneral-bundle\STIXFontLicense2010.txt" />
+    <Content Include="lib\ueditor\third-party\mathquill\font\stixgeneral-bundle\stixgeneral-webfont.svg" />
+    <Content Include="lib\ueditor\third-party\mathquill\font\stixgeneral-bundle\stixgeneralbol-webfont.svg" />
+    <Content Include="lib\ueditor\third-party\mathquill\font\stixgeneral-bundle\stixgeneralbolita-webfont.svg" />
+    <Content Include="lib\ueditor\third-party\mathquill\font\stixgeneral-bundle\stixgeneralitalic-webfont.svg" />
+    <Content Include="lib\ueditor\third-party\mathquill\font\Symbola.svg" />
+    <Content Include="lib\ueditor\third-party\mathquill\mathquill.css" />
+    <Content Include="lib\ueditor\third-party\mathquill\mathquill.js" />
+    <Content Include="lib\ueditor\third-party\mathquill\mathquill.min.js" />
+    <Content Include="lib\ueditor\ui\button.js" />
+    <Content Include="lib\ueditor\ui\buttoncombobox.js" />
+    <Content Include="lib\ueditor\ui\colorpicker.js" />
+    <Content Include="lib\ueditor\ui\colorsplitbutton.js" />
+    <Content Include="lib\ueditor\ui\combobox.js" />
+    <Content Include="lib\ueditor\ui\dropmenu.js" />
+    <Content Include="lib\ueditor\ui\menu.js" />
+    <Content Include="lib\ueditor\ui\modal.js" />
+    <Content Include="lib\ueditor\ui\popup.js" />
+    <Content Include="lib\ueditor\ui\scale.js" />
+    <Content Include="lib\ueditor\ui\separator.js" />
+    <Content Include="lib\ueditor\ui\splitbutton.js" />
+    <Content Include="lib\ueditor\ui\tab.js" />
+    <Content Include="lib\ueditor\ui\toolbar.js" />
+    <Content Include="lib\ueditor\ui\tooltip.js" />
+    <Content Include="lib\ueditor\ui\widget.js" />
+    <Content Include="lib\ueditor\umeditor.config.js" />
+    <Content Include="lib\bootstrap\css\bootstrap.css" />
+    <Content Include="lib\bootstrap\css\bootstrap.min.css" />
+    <Content Include="lib\bootstrap\img\glyphicons-halflings-white.png" />
+    <Content Include="lib\bootstrap\img\glyphicons-halflings.png" />
+    <Content Include="lib\bootstrap\js\bootstrap.js" />
+    <Content Include="lib\bootstrap\js\bootstrap.min.js" />
+    <Content Include="lib\font-awesome\.gitignore" />
+    <Content Include="lib\font-awesome\css\font-awesome-ie7.css" />
+    <Content Include="lib\font-awesome\css\font-awesome.css" />
+    <Content Include="lib\font-awesome\docs\assets\css\font-awesome-ie7.css" />
+    <Content Include="lib\font-awesome\docs\assets\css\font-awesome.css" />
+    <Content Include="lib\font-awesome\docs\assets\css\prettify.css" />
+    <Content Include="lib\font-awesome\docs\assets\css\site.css" />
+    <Content Include="lib\font-awesome\docs\assets\font\fontawesome-webfont.svg" />
+    <Content Include="lib\font-awesome\docs\assets\ico\favicon.ico" />
+    <Content Include="lib\font-awesome\docs\assets\js\backbone.min.js" />
+    <Content Include="lib\font-awesome\docs\assets\js\index\index.js" />
+    <Content Include="lib\font-awesome\docs\assets\js\jquery-1.7.1.min.js" />
+    <Content Include="lib\font-awesome\docs\assets\js\prettify.min.js" />
+    <Content Include="lib\font-awesome\docs\assets\js\tw-bs-201\bootstrap-alert.js" />
+    <Content Include="lib\font-awesome\docs\assets\js\tw-bs-201\bootstrap-button.js" />
+    <Content Include="lib\font-awesome\docs\assets\js\tw-bs-201\bootstrap-carousel.js" />
+    <Content Include="lib\font-awesome\docs\assets\js\tw-bs-201\bootstrap-collapse.js" />
+    <Content Include="lib\font-awesome\docs\assets\js\tw-bs-201\bootstrap-dropdown.js" />
+    <Content Include="lib\font-awesome\docs\assets\js\tw-bs-201\bootstrap-modal.js" />
+    <Content Include="lib\font-awesome\docs\assets\js\tw-bs-201\bootstrap-popover.js" />
+    <Content Include="lib\font-awesome\docs\assets\js\tw-bs-201\bootstrap-scrollspy.js" />
+    <Content Include="lib\font-awesome\docs\assets\js\tw-bs-201\bootstrap-tab.js" />
+    <Content Include="lib\font-awesome\docs\assets\js\tw-bs-201\bootstrap-tooltip.js" />
+    <Content Include="lib\font-awesome\docs\assets\js\tw-bs-201\bootstrap-transition.js" />
+    <Content Include="lib\font-awesome\docs\assets\js\tw-bs-201\bootstrap-typeahead.js" />
+    <Content Include="lib\font-awesome\docs\assets\js\underscore.min.js" />
+    <Content Include="lib\font-awesome\docs\index.html" />
+    <Content Include="lib\font-awesome\font\fontawesome-webfont.svg" />
+    <Content Include="lib\fullcalendar-1.5.3\changelog.txt" />
+    <Content Include="lib\fullcalendar-1.5.3\demos\agenda-views.html" />
+    <Content Include="lib\fullcalendar-1.5.3\demos\basic-views.html" />
+    <Content Include="lib\fullcalendar-1.5.3\demos\cupertino\images\ui-bg_diagonals-thick_90_eeeeee_40x40.png" />
+    <Content Include="lib\fullcalendar-1.5.3\demos\cupertino\images\ui-bg_flat_15_cd0a0a_40x100.png" />
+    <Content Include="lib\fullcalendar-1.5.3\demos\cupertino\images\ui-bg_glass_100_e4f1fb_1x400.png" />
+    <Content Include="lib\fullcalendar-1.5.3\demos\cupertino\images\ui-bg_glass_50_3baae3_1x400.png" />
+    <Content Include="lib\fullcalendar-1.5.3\demos\cupertino\images\ui-bg_glass_80_d7ebf9_1x400.png" />
+    <Content Include="lib\fullcalendar-1.5.3\demos\cupertino\images\ui-bg_highlight-hard_100_f2f5f7_1x100.png" />
+    <Content Include="lib\fullcalendar-1.5.3\demos\cupertino\images\ui-bg_highlight-hard_70_000000_1x100.png" />
+    <Content Include="lib\fullcalendar-1.5.3\demos\cupertino\images\ui-bg_highlight-soft_100_deedf7_1x100.png" />
+    <Content Include="lib\fullcalendar-1.5.3\demos\cupertino\images\ui-bg_highlight-soft_25_ffef8f_1x100.png" />
+    <Content Include="lib\fullcalendar-1.5.3\demos\cupertino\images\ui-icons_2694e8_256x240.png" />
+    <Content Include="lib\fullcalendar-1.5.3\demos\cupertino\images\ui-icons_2e83ff_256x240.png" />
+    <Content Include="lib\fullcalendar-1.5.3\demos\cupertino\images\ui-icons_3d80b3_256x240.png" />
+    <Content Include="lib\fullcalendar-1.5.3\demos\cupertino\images\ui-icons_72a7cf_256x240.png" />
+    <Content Include="lib\fullcalendar-1.5.3\demos\cupertino\images\ui-icons_ffffff_256x240.png" />
+    <Content Include="lib\fullcalendar-1.5.3\demos\cupertino\theme.css" />
+    <Content Include="lib\fullcalendar-1.5.3\demos\default.html" />
+    <Content Include="lib\fullcalendar-1.5.3\demos\external-dragging.html" />
+    <Content Include="lib\fullcalendar-1.5.3\demos\gcal.html" />
+    <Content Include="lib\fullcalendar-1.5.3\demos\json.html" />
+    <Content Include="lib\fullcalendar-1.5.3\demos\selectable.html" />
+    <Content Include="lib\fullcalendar-1.5.3\demos\theme.html" />
+    <Content Include="lib\fullcalendar-1.5.3\fullcalendar\fullcalendar.css" />
+    <Content Include="lib\fullcalendar-1.5.3\fullcalendar\fullcalendar.js" />
+    <Content Include="lib\fullcalendar-1.5.3\fullcalendar\fullcalendar.min.js" />
+    <Content Include="lib\fullcalendar-1.5.3\fullcalendar\fullcalendar.print.css" />
+    <Content Include="lib\fullcalendar-1.5.3\fullcalendar\gcal.js" />
+    <Content Include="lib\fullcalendar-1.5.3\GPL-LICENSE.txt" />
+    <Content Include="lib\fullcalendar-1.5.3\jquery\jquery-1.7.1.min.js" />
+    <Content Include="lib\fullcalendar-1.5.3\jquery\jquery-ui-1.8.17.custom.min.js" />
+    <Content Include="lib\fullcalendar-1.5.3\MIT-LICENSE.txt" />
+    <Content Include="loginFrm.html" />
+    <Content Include="sign-in.html" />
+    <Content Include="stylesheets\elements.css" />
+    <Content Include="stylesheets\theme.css" />
+    <Content Include="Web.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="lib\ueditor\net\ImageUpHandler.ashx.cs">
+      <DependentUpon>ImageUpHandler.ashx</DependentUpon>
+    </Compile>
+    <Compile Include="lib\ueditor\net\Uploader.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+  </ItemGroup>
+  <ItemGroup />
+  <PropertyGroup>
+    <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>
+    <VSToolsPath Condition="'$(VSToolsPath)' == ''">$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)</VSToolsPath>
+  </PropertyGroup>
+  <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
+  <Import Project="$(VSToolsPath)\WebApplications\Microsoft.WebApplication.targets" Condition="'$(VSToolsPath)' != ''" />
+  <Import Project="$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v10.0\WebApplications\Microsoft.WebApplication.targets" Condition="false" />
+  <ProjectExtensions>
+    <VisualStudio>
+      <FlavorProperties GUID="{349c5851-65df-11da-9384-00065b846f21}">
+        <WebProjectProperties>
+          <UseIIS>True</UseIIS>
+          <AutoAssignPort>True</AutoAssignPort>
+          <DevelopmentServerPort>34930</DevelopmentServerPort>
+          <DevelopmentServerVPath>/</DevelopmentServerVPath>
+          <IISUrl>http://localhost:34930/</IISUrl>
+          <NTLMAuthentication>False</NTLMAuthentication>
+          <UseCustomServer>False</UseCustomServer>
+          <CustomServerUrl>
+          </CustomServerUrl>
+          <SaveServerSettingsInUserFile>False</SaveServerSettingsInUserFile>
+        </WebProjectProperties>
+      </FlavorProperties>
+    </VisualStudio>
+  </ProjectExtensions>
+  <Target Name="EnsureNuGetPackageBuildImports" BeforeTargets="PrepareForBuild">
+    <PropertyGroup>
+      <ErrorText>此项目引用这台计算机上缺少的 NuGet 程序包。使用 NuGet 程序包还原可下载这些程序包。有关详细信息，请参阅 http://go.microsoft.com/fwlink/?LinkID=322105。缺少的文件是 {0}。</ErrorText>
+    </PropertyGroup>
+    <Error Condition="!Exists('..\packages\Microsoft.Net.Compilers.1.0.0\build\Microsoft.Net.Compilers.props')" Text="$([System.String]::Format('$(ErrorText)', '..\packages\Microsoft.Net.Compilers.1.0.0\build\Microsoft.Net.Compilers.props'))" />
+    <Error Condition="!Exists('..\packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.1.0.0\build\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.props')" Text="$([System.String]::Format('$(ErrorText)', '..\packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.1.0.0\build\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.props'))" />
+  </Target>
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>
