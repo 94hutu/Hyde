@@ -18,6 +18,8 @@ namespace Hyde.Api.Config
             Mapper.CreateMap<Supply, supplyDto>();
             Mapper.CreateMap<brandDto, Brand>();
             Mapper.CreateMap<Brand, brandDto>();
+
+            
         }
     }
 }

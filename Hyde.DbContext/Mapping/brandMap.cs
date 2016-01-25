@@ -22,6 +22,8 @@ namespace Hyde.Context.Mapping
 
             this.Property(t => t.imgpath).HasMaxLength(255).IsUnicode();
 
+            this.Property(t => t.shutout).HasColumnName("shutout");
+
             ToTable("brand");
         }
     }

@@ -20,9 +20,9 @@ namespace Hyde.Transfer
     {
         static void Main(string[] args)
         {
-            var service = GetService<IGenderService>();
+            var service = GetService<IStockService>();
 
-            var List = service.GetGenderListAsync(false).Result;
+            //var List = service.GetVstockListAsync(new int[] { 1, 2, 3 }).Result;
 
             Console.ReadLine();
         }

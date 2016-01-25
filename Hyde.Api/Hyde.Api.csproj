@@ -89,11 +89,13 @@
     <Compile Include="Config\SessionableControllerHandler.cs" />
     <Compile Include="Config\WebApiConfig.cs" />
     <Compile Include="Constraints\OptionalRegExConstraint.cs" />
+    <Compile Include="Controllers\StockController.cs" />
     <Compile Include="Dispatcher\SupplyDispatcher.cs" />
     <Compile Include="Filters\EmptyParameterFilterAttribute.cs" />
     <Compile Include="Filters\InvalidModelStateFilterAttribute.cs" />
     <Compile Include="ModelBinders\UserBinder.cs" />
     <Compile Include="Models\RequestModels\Brand.cs" />
+    <Compile Include="Models\RequestModels\StockViewModel.cs" />
     <Compile Include="Models\RequestModels\Supply.cs" />
     <Compile Include="Validation\MaximumAttribute.cs" />
     <Compile Include="Validation\MinimumAttribute.cs" />
@@ -107,7 +109,6 @@
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_File\" />
-    <Folder Include="Controllers\" />
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\Hyde.DbContext\Hyde.Context.csproj">

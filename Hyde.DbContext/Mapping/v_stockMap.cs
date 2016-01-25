@@ -18,7 +18,7 @@ namespace Hyde.Context.Mapping
 
             ToTable("v_stock");
 
-            HasRequired(t => t.product).WithMany().HasForeignKey(t => t.productid);
+            HasRequired(t => t.product).WithMany(t=>t.v_stocks).HasForeignKey(t => t.productid);
             HasRequired(t => t.size).WithMany().HasForeignKey(t => t.sizeid);
             HasRequired(t => t.warehouse).WithMany(t => t.v_stocks).HasForeignKey(t => t.warehouseid);
             HasRequired(t => t.supply).WithMany().HasForeignKey(t => t.supplyid);

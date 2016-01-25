@@ -61,5 +61,7 @@ namespace Hyde.Domain.Model
 
         public virtual List<skuDto> skus { get; set; } = new List<skuDto>();
 
+        public virtual List<v_stockDto> v_stocks { get; set; } = new List<v_stockDto>();
+
     }
 }

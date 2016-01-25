@@ -9,6 +9,9 @@ namespace Hyde.Service
 {
     public interface IStockService : IService
     {
-        Task<OperationResult<PageResult<v_stockDto>>> GetStockListAsync(IEnumerable<int> productids, int? genderid = null, int? categroyid = null, int? brandids = null, int pageindex = 1, int pagesize = 20);
+        Task<OperationResult<PageResult<productDto>>> GetVstockListAsync(int pageindex = 1, int pagesize = 20, IEnumerable<int> productids = null, int? genderid = null, int? categroyid = null, int? brandids = null);
+
+        Task<OperationResult> AddStockAsync(IEnumerable<stockDto> items);
+
     }
 }

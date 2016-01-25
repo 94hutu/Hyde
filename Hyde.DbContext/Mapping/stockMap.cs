@@ -22,7 +22,7 @@ namespace Hyde.Context.Mapping
 
             HasRequired(t => t.product).WithMany().HasForeignKey(t => t.productid);
             HasRequired(t => t.size).WithMany().HasForeignKey(t => t.sizeid);
-            HasRequired(t => t.warehouse).WithMany().HasForeignKey(t => t.sizeid);
+            HasRequired(t => t.warehouse).WithMany().HasForeignKey(t => t.warehouseid);
             HasRequired(t => t.supply).WithMany().HasForeignKey(t => t.supplyid);
         }
     }
