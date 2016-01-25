@@ -20,16 +20,14 @@ namespace Hyde.Transfer
     {
         static void Main(string[] args)
         {
-            string apikey = ConfigurationManager.AppSettings["apikey"];
+            var service = GetService<IGenderService>();
 
-            var DAL = GetProvider<ISanfenqiu>();
-
-            var stock = DAL.GetStock(apikey, 338679);   
+            var List = service.GetGenderListAsync(false).Result;
 
             Console.ReadLine();
         }
 
-        private static T GetProvider<T>()
+        private static T GetService<T>()
         {
             var builder = new ContainerBuilder();
             builder.RegisterType<HydeContext>().As<DbContext>().InstancePerLifetimeScope();
@@ -37,6 +35,12 @@ namespace Hyde.Transfer
             builder.RegisterGeneric(typeof(Repository<>)).As(typeof(IRepository<>)).InstancePerLifetimeScope();
             builder.RegisterType<HighwaveOp>().As<IHighwave>().AsImplementedInterfaces();
             builder.RegisterType<SanfenqiuOp>().As<ISanfenqiu>().AsImplementedInterfaces();
+
+            var baseType = typeof(IService);
+            var serviceassembily = new Assembly[] { baseType.Assembly };
+
+            builder.RegisterAssemblyTypes(serviceassembily).Where(t => baseType.IsAssignableFrom(t) && t != baseType).AsImplementedInterfaces();
+
             var container = builder.Build();
 
             return container.Resolve<T>();

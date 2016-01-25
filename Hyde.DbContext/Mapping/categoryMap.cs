@@ -19,7 +19,7 @@ namespace Hyde.Context.Mapping
 
             this.Property(t => t.name).HasMaxLength(50).IsUnicode().IsRequired();
 
-
+            this.Property(t => t.shutout).HasColumnName("shutout");
 
             ToTable("category");
 

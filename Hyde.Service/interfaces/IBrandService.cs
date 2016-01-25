@@ -9,7 +9,7 @@ namespace Hyde.Service
 {
     public interface IBrandService : IService
     {
-        Task<OperationResult<List<brandDto>>> GerBrandListAsync();
+        Task<OperationResult<List<brandDto>>> GetBrandListAsync(bool? shutout = null);
 
         Task<OperationResult> AddBrandAsync(IEnumerable<brandDto> items);
 

@@ -29,9 +29,16 @@ namespace Hyde.Service
             return new OperationResult() { err_code = ErrorEnum.success, err_info = ErrorEnum.success.ToString() };
         }
 
-        public async Task<OperationResult<List<brandDto>>> GerBrandListAsync()
+        public async Task<OperationResult<List<brandDto>>> GetBrandListAsync(bool? shutout = null)
         {
-            var result = await brandRepo.Find().AsNoTracking().ToListAsync();
+            var Query = brandRepo.Find();
+
+            if (shutout.HasValue)
+            {
+                Query = Query.Where(t => t.shutout == shutout);
+            }
+
+            var result = await Query.AsNoTracking().ToListAsync();
 
             return new OperationResult<List<brandDto>>() { err_code = ErrorEnum.success, err_info = ErrorEnum.success.ToString(), entity = result };
 

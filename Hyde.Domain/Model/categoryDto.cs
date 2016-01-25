@@ -14,11 +14,14 @@ namespace Hyde.Domain.Model
             children = new List<categoryDto>();
         }
 
+
         public int key { get; set; }
 
         public string name { get; set; }
 
         public int? pid { get; set; }
+
+        public bool shutout { get; set; } = false;
 
         public virtual List<categoryDto> children { get; set; }
 

@@ -29,9 +29,17 @@ namespace Hyde.Service.interfaces
             return new OperationResult() { err_code = ErrorEnum.success, err_info = ErrorEnum.success.ToString() };
         }
 
-        public async Task<OperationResult<List<categoryDto>>> GetCategoryAsync()
+        public async Task<OperationResult<List<categoryDto>>> GetCategoryListAsync(bool? shutout = null)
         {
-            var result = await categoryRepo.Find().AsNoTracking().ToListAsync();
+
+            var Query = categoryRepo.Find().AsNoTracking();
+
+            if (shutout.HasValue)
+            {
+                Query = Query.Where(t => t.shutout == shutout);
+            }
+
+            var result = await Query.ToListAsync();
 
             return new OperationResult<List<categoryDto>>() { err_code = ErrorEnum.success, err_info = ErrorEnum.success.ToString(), entity = result };
         }

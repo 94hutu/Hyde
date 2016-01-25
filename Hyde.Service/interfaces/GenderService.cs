@@ -18,9 +18,16 @@ namespace Hyde.Service
             unitOfwork = UnitOfWork;
             genderRepo = unitOfwork.GetRepository<genderDto>();
         }
-        public async Task<OperationResult<List<genderDto>>> GetGenderListAsync()
+        public async Task<OperationResult<List<genderDto>>> GetGenderListAsync(bool? shutout = null)
         {
-            var result = await genderRepo.Find().AsNoTracking().ToListAsync();
+            var Query = genderRepo.Find().AsNoTracking();
+
+            if (shutout.HasValue)
+            {
+                Query = Query.Where(t => t.shutout == shutout);
+            }
+
+            var result = await Query.ToListAsync();
 
             return new OperationResult<List<genderDto>>() { err_code = ErrorEnum.success, err_info = ErrorEnum.success.ToString(), entity = result };
         }

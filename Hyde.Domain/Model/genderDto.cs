@@ -17,6 +17,8 @@ namespace Hyde.Domain.Model
 
         public string name { get; set; }
 
+        public bool shutout { get; set; }
+
         public string imgpath { get; set; }
     }
 }

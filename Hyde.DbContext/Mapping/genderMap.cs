@@ -20,6 +20,8 @@ namespace Hyde.Context.Mapping
 
             this.Property(t => t.imgpath).IsUnicode().HasMaxLength(255);
 
+            this.Property(t => t.shutout).HasColumnName("shutout");
+
             ToTable("gender");
         }
     }

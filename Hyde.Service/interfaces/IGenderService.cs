@@ -9,7 +9,7 @@ namespace Hyde.Service
 {
     public interface IGenderService : IService
     {
-        Task<OperationResult<List<genderDto>>> GetGenderListAsync();
+        Task<OperationResult<List<genderDto>>> GetGenderListAsync(bool? shutout=null);
 
         Task<OperationResult> AddGenderAsync(IEnumerable<genderDto> items);
     }

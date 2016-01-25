@@ -30,9 +30,9 @@ namespace Hyde.Api.Config
             builder.RegisterType<SanfenqiuOp>().As<ISanfenqiu>().AsImplementedInterfaces();
             builder.RegisterType<HighwaveOp>().As<IHighwave>().AsImplementedInterfaces();
             //业务类注册
-
-            var serviceassembily = new Assembly[] { typeof(IService).Assembly };
             var baseType = typeof(IService);
+            var serviceassembily = new Assembly[] { baseType.Assembly };
+
             builder.RegisterAssemblyTypes(serviceassembily).Where(t => baseType.IsAssignableFrom(t) && t != baseType).AsImplementedInterfaces();
 
             var container = builder.Build();
@@ -45,7 +45,7 @@ namespace Hyde.Api.Config
         /// <param name="types">当前程序集中的类型集合</param>
         /// <param name="builder">autofac构造器</param>
         private static void InitService(Type[] types, ContainerBuilder builder)
-        {          
+        {
 
             builder.RegisterTypes(types.Where(t => typeof(IService).IsAssignableFrom(t)).ToArray()).AsImplementedInterfaces().InstancePerLifetimeScope();
 
