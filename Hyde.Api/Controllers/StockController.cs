@@ -30,12 +30,12 @@ namespace Hyde.Api.Controllers
             ajustpriceService = AjustPriceService;
         }
         [HttpPost]
-        public async Task<HttpResponseMessage> GetVstockList([FromBody]RequestSelectvstock vstockParameter, PageCommand page)
+        public async Task<HttpResponseMessage> GetVstockList([FromBody]RequestSelectvstock vstockparameter, PageCommand page)
         {
 
             PageCommand Page = page ?? new PageCommand();
 
-            var result = await stockService.GetVstockListAsync(Page.PageIndex, Page.PageSize, vstockParameter?.productids, vstockParameter?.genderid, vstockParameter?.categoryid, vstockParameter?.brandid);
+            var result = await stockService.GetVstockListAsync(Page.PageIndex, Page.PageSize, vstockparameter?.productids, vstockparameter?.genderid, vstockparameter?.categoryid, vstockparameter?.brandid);
 
             if (result.err_code != ErrorEnum.success)
             {

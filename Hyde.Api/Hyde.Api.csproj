@@ -89,6 +89,7 @@
     <Compile Include="Config\SessionableControllerHandler.cs" />
     <Compile Include="Config\WebApiConfig.cs" />
     <Compile Include="Constraints\OptionalRegExConstraint.cs" />
+    <Compile Include="Controllers\BaseDataController.cs" />
     <Compile Include="Controllers\StockController.cs" />
     <Compile Include="Dispatcher\SupplyDispatcher.cs" />
     <Compile Include="Filters\EmptyParameterFilterAttribute.cs" />
