@@ -51,7 +51,10 @@
   <ItemGroup>
     <Compile Include="HydeContext.cs" />
     <Compile Include="Mapping\addressMap.cs" />
+    <Compile Include="Mapping\ajustpricedetailMap.cs" />
+    <Compile Include="Mapping\ajustpriceheadeMap.cs" />
     <Compile Include="Mapping\areaMap.cs" />
+    <Compile Include="Mapping\baseMap.cs" />
     <Compile Include="Mapping\brandMap.cs" />
     <Compile Include="Mapping\categoryMap.cs" />
     <Compile Include="Mapping\customeraddressMap.cs" />

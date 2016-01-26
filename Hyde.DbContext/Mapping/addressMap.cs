@@ -14,9 +14,9 @@ namespace Hyde.Context.Mapping
         {
             this.Property(t => t.name).HasMaxLength(20).IsUnicode().HasColumnName("name").IsRequired();
 
-            this.Property(t => t.receptionaddress).HasMaxLength(255).IsRequired().IsUnicode().HasColumnName("receptionaddress");
+            this.Property(t => t.receptionaddress).HasMaxLength(baseMap.remarklength).IsRequired().IsUnicode().HasColumnName("receptionaddress");
 
-            this.Property(t => t.telephone).HasMaxLength(20).IsRequired().IsUnicode().HasColumnName("telephone");
+            this.Property(t => t.telephone).HasMaxLength(baseMap.namelength).IsRequired().IsUnicode().HasColumnName("telephone");
         }
     }
 }

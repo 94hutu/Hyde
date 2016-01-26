@@ -20,11 +20,28 @@ namespace Hyde.Transfer
     {
         static void Main(string[] args)
         {
-            var service = GetService<IStockService>();
+            //List<source> source = new List<Program.source>();
 
-            //var List = service.GetVstockListAsync(new int[] { 1, 2, 3 }).Result;
+            //source.Add(new Program.source { Key = 1, Value = 1 });
+
+            //source.Add(new Program.source { Key = 2, Value = 1 });
+
+            //source.Add(new Program.source { Key = 3, Value = 2 });
+
+            //var a = source.GroupBy(t => t.Value).Select(t => new { max = t.Max(o => o.Key), t.Key });
+
+            var DAL = GetService<IAdjustPriceService>();
+
+            DAL.GetSalePriceListAsync(new DateTime(2016, 1, 11), new int[] { 1 });
 
             Console.ReadLine();
+        }
+
+        public class source
+        {
+            public int Key { get; set; }
+
+            public int Value { get; set; }
         }
 
         private static T GetService<T>()

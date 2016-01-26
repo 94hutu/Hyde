@@ -94,9 +94,8 @@
     <Compile Include="Filters\EmptyParameterFilterAttribute.cs" />
     <Compile Include="Filters\InvalidModelStateFilterAttribute.cs" />
     <Compile Include="ModelBinders\UserBinder.cs" />
-    <Compile Include="Models\RequestModels\Brand.cs" />
-    <Compile Include="Models\RequestModels\StockViewModel.cs" />
-    <Compile Include="Models\RequestModels\Supply.cs" />
+    <Compile Include="Models\RequestModels\RequestVstock.cs" />
+    <Compile Include="Models\ReponseModels\StockViewModel.cs" />
     <Compile Include="Validation\MaximumAttribute.cs" />
     <Compile Include="Validation\MinimumAttribute.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />

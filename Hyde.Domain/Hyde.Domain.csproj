@@ -43,6 +43,8 @@
     <Compile Include="HydeEnum.cs" />
     <Compile Include="Model\address.cs" />
     <Compile Include="IEntity.cs" />
+    <Compile Include="Model\ajustpriceheadeDto.cs" />
+    <Compile Include="Model\ajustpricedetailDto.cs" />
     <Compile Include="Model\areaDto.cs" />
     <Compile Include="Model\brandDto.cs" />
     <Compile Include="Model\categoryDto.cs" />

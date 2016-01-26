@@ -4,7 +4,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace Hyde.Api.Models.RequestModels
+namespace Hyde.Api.Models.ReponseModels
 {
     public class StockViewModel
     {

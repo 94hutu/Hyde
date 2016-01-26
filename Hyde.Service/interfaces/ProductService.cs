@@ -35,9 +35,15 @@ namespace Hyde.Service
 
         public async Task<OperationResult> AddProductAsync(IEnumerable<productDto> items)
         {
-            productRepo.Add(items);
-            await unitOfwork.SaveAsync();
-            return new OperationResult() { err_code = ErrorEnum.success, err_info = ErrorEnum.success.ToString() };
+            try
+            {
+                productRepo.Add(items);
+                await unitOfwork.SaveAsync();
+                return new OperationResult() { err_code = ErrorEnum.success, err_info = ErrorEnum.success.ToString() }; }
+            catch(Exception ex)
+            {
+                return new OperationResult() { err_code = ErrorEnum.sys_error, err_info = ex.Message };
+            }
         }
     }
 }
