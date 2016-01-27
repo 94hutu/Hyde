@@ -4,10 +4,11 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace Hyde.Api.Models.ReponseModels
+namespace Hyde.Service.Models
 {
-    public class StockViewModel
+    public class SaleProductModel
     {
+
         public int productid { get; set; }
 
         public string code { get; set; }
@@ -26,10 +27,10 @@ namespace Hyde.Api.Models.ReponseModels
 
         public string imgpath { get; set; }
 
-        public List<StockdetailViewModel> details { get; set; } = new List<StockdetailViewModel>();
+        public List<SaleProductDetailModel> details { get; set; } = new List<SaleProductDetailModel>();
     }
 
-    public class StockdetailViewModel
+    public class SaleProductDetailModel
     {
         public int productid { get; set; }
 
@@ -40,5 +41,6 @@ namespace Hyde.Api.Models.ReponseModels
         public int sizeid { get; set; }
 
         public decimal stockquantity { get; set; }
+
     }
 }

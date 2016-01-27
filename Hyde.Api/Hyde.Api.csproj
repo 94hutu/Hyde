@@ -54,10 +54,6 @@
       <HintPath>..\packages\Newtonsoft.Json.8.0.1\lib\net45\Newtonsoft.Json.dll</HintPath>
       <Private>True</Private>
     </Reference>
-    <Reference Include="PagedList, Version=1.17.0.0, Culture=neutral, PublicKeyToken=abbb863e9397c5e1, processorArchitecture=MSIL">
-      <HintPath>..\packages\PagedList.1.17.0.0\lib\net40\PagedList.dll</HintPath>
-      <Private>True</Private>
-    </Reference>
     <Reference Include="System" />
     <Reference Include="System.ComponentModel.DataAnnotations" />
     <Reference Include="System.Configuration" />
@@ -90,13 +86,12 @@
     <Compile Include="Config\WebApiConfig.cs" />
     <Compile Include="Constraints\OptionalRegExConstraint.cs" />
     <Compile Include="Controllers\BaseDataController.cs" />
-    <Compile Include="Controllers\StockController.cs" />
+    <Compile Include="Controllers\ProductController.cs" />
     <Compile Include="Dispatcher\SupplyDispatcher.cs" />
     <Compile Include="Filters\EmptyParameterFilterAttribute.cs" />
     <Compile Include="Filters\InvalidModelStateFilterAttribute.cs" />
     <Compile Include="ModelBinders\UserBinder.cs" />
-    <Compile Include="Models\RequestModels\RequestVstock.cs" />
-    <Compile Include="Models\ReponseModels\StockViewModel.cs" />
+    <Compile Include="Models\RequestModels\ProductRequest.cs" />
     <Compile Include="Validation\MaximumAttribute.cs" />
     <Compile Include="Validation\MinimumAttribute.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />

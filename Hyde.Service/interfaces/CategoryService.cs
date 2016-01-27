@@ -7,7 +7,7 @@ using Hyde.Domain.Model;
 using Hyde.Result.Operation;
 using System.Data.Entity;
 using Hyde.Repository;
-namespace Hyde.Service.interfaces
+namespace Hyde.Service
 {
     public class CategoryService : ICategroyService
     {

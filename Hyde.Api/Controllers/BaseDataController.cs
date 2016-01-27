@@ -30,7 +30,6 @@ namespace Hyde.Api.Controllers
         }
 
         [HttpGet]
-
         public async Task<HttpResponseMessage> GetBrandList(bool? shutout = null)
         {
             var result = await brandService.GetBrandListAsync(shutout);

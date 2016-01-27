@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 using Hyde.Api.Validation;
 namespace Hyde.Api.Models.RequestModels
 {
-    public class RequestSelectvstock
+    public class SaleProductSearch
     {
         public int[] productids { get; set; }
        

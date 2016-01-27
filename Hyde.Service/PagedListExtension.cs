@@ -23,5 +23,20 @@ namespace Hyde.Service
                 PageList = source.ToList()
             };
         }
+
+        public static PageResult<C> ToPageResult<T, C>(this IPagedList<T> source, Func<IPagedList<T>, IEnumerable<C>> convert)
+        {
+            if (source == null)
+                return null;
+
+            return new PageResult<C>()
+            {
+                PageIndex = source.PageNumber,
+                PageSize = source.PageSize,
+                TotalItem = source.TotalItemCount,
+                TotalPage = source.PageCount,
+                PageList = convert(source)
+            };
+        }
     }
 }
