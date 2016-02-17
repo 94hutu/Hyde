@@ -213,6 +213,10 @@
     <Content Include="js\dist\fonts\glyphicons-halflings-regular.ttf" />
     <Content Include="js\dist\fonts\glyphicons-halflings-regular.woff" />
     <Content Include="js\dist\fonts\glyphicons-halflings-regular.woff2" />
+    <Content Include="lib\bootstrap\css\bootstrap-theme.css" />
+    <Content Include="lib\bootstrap\css\bootstrap-theme.min.css" />
+    <Content Include="lib\bootstrap\fonts\glyphicons-halflings-regular.svg" />
+    <Content Include="lib\bootstrap\js\npm.js" />
     <Content Include="lib\jPaginate\smartpaginator.css" />
     <Content Include="lib\jPaginate\smartpaginator.js" />
     <Content Include="js\login.js" />
@@ -304,6 +308,13 @@
     <Content Include="lib\font-awesome\sass\font-awesome.sass" />
     <Content Include="lib\font-awesome\sass\font-awesome.scss" />
     <Content Include="lib\fullcalendar-1.5.3\demos\json-events.php" />
+    <Content Include="lib\bootstrap\css\bootstrap.css.map" />
+    <Content Include="lib\bootstrap\css\bootstrap.min.css.map" />
+    <Content Include="lib\bootstrap\css\bootstrap-theme.css.map" />
+    <Content Include="lib\bootstrap\fonts\glyphicons-halflings-regular.eot" />
+    <Content Include="lib\bootstrap\fonts\glyphicons-halflings-regular.ttf" />
+    <Content Include="lib\bootstrap\fonts\glyphicons-halflings-regular.woff" />
+    <Content Include="lib\bootstrap\fonts\glyphicons-halflings-regular.woff2" />
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
     </None>
@@ -476,8 +487,6 @@
     <Content Include="lib\ueditor\umeditor.config.js" />
     <Content Include="lib\bootstrap\css\bootstrap.css" />
     <Content Include="lib\bootstrap\css\bootstrap.min.css" />
-    <Content Include="lib\bootstrap\img\glyphicons-halflings-white.png" />
-    <Content Include="lib\bootstrap\img\glyphicons-halflings.png" />
     <Content Include="lib\bootstrap\js\bootstrap.js" />
     <Content Include="lib\bootstrap\js\bootstrap.min.js" />
     <Content Include="lib\font-awesome\.gitignore" />
@@ -542,6 +551,7 @@
     <Content Include="lib\fullcalendar-1.5.3\jquery\jquery-ui-1.8.17.custom.min.js" />
     <Content Include="lib\fullcalendar-1.5.3\MIT-LICENSE.txt" />
     <Content Include="loginFrm.html" />
+    <Content Include="productLst.html" />
     <Content Include="sign-in.html" />
     <Content Include="stylesheets\elements.css" />
     <Content Include="stylesheets\theme.css" />

@@ -14,13 +14,13 @@ function login() {
         return;
     }
     $.ajax({
-        url: "http://171.221.240.159:10000/api",
+        url: "http://171.221.240.159:10000/api/ProductController/GetProduct",
         dataType: 'jsonp',
         jsonp: "jsoncallback",
-        contentType: "application/x-www-form-urlencoded",
+        //contentType: "application/x-www-form-urlencoded",
         username: "hk013",
         password:"123",
-        data: { username: loginName, password: pwd},
+        data: { code: loginName },
         success: function (data) {
             alert(data);
             window.location.href = "index.html";
