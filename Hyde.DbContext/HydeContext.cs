@@ -13,7 +13,7 @@ namespace Hyde.Context
 
         static HydeContext()
         {
-            Database.SetInitializer<HydeContext>(null);
+            Database.SetInitializer<HydeContext>(null);//如果没有数据库则注释这行代码，运行自动生成
         }
 
         public HydeContext()

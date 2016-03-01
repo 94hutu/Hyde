@@ -21,7 +21,7 @@ namespace Hyde.Api.Config
             var routeTables = config.Routes;
 
             routeTables.MapHttpRoute("DefaultApi",
-                 routeTemplate: "api/{controller}/{action}/{Key}",
+                 routeTemplate: "{controller}/{action}/{Key}",//api/{controller}/{action}/{Key}
                  defaults: new { Key = RouteParameter.Optional },
                  constraints: new { Key = new OptionalRegExConstraint(@"\d+") });
 

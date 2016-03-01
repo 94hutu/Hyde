@@ -59,6 +59,7 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="index.html" />
+    <Content Include="js\product.js" />
     <Content Include="lib\artDialog4.1.7\artDialog.js" />
     <Content Include="lib\artDialog4.1.7\artDialog.source.js" />
     <Content Include="lib\artDialog4.1.7\index.html" />
