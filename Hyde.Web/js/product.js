@@ -1,7 +1,28 @@
 ﻿$(function () {
     getBrandLst();
 });
-
+/**
+ * 将数值四舍五入(保留2位小数)后格式化成金额形式
+ *
+ * @param num 数值(Number或者String)
+ * @return 金额格式的字符串,如'1,234,567.45'
+ * @type String
+ */
+function formatCurrency(num) {
+    num = num.toString().replace(/\$|\,/g, '');
+    if (isNaN(num))
+        num = "0";
+    sign = (num == (num = Math.abs(num)));
+    num = Math.floor(num * 100 + 0.50000000001);
+    cents = num % 100;
+    num = Math.floor(num / 100).toString();
+    if (cents < 10)
+        cents = "0" + cents;
+    for (var i = 0; i < Math.floor((num.length - (1 + i)) / 3) ; i++)
+        num = num.substring(0, num.length - (4 * i + 3)) + ',' +
+        num.substring(num.length - (4 * i + 3));
+    return (((sign) ? '' : '-') + num + '.' + cents);
+}
 
 function searchGo() {
     $.ajax({
@@ -51,8 +72,8 @@ function getProductHtml(pitem) {
     html += "<table class='table' style='border-bottom:solid #808080'> <tr>";
     html += "<td style='width: 10%'><img src='" + (pitem.imgpath == null ? "image/default.png" : pitem.imgpath) + "' alt='...'/></td>";
     html += "<td colspan='2'>";
-    html += "<div style='float: left;color:red'>￥" + pitem.saleprice + "</div>";
-    html += "<div style='float: right'>吊牌价：" + pitem.unitprice + "</div>";
+    html += "<div style='float: left;color:red'>￥" + formatCurrency(pitem.saleprice) + "</div>";
+    html += "<div style='float: right'>吊牌价：" + formatCurrency(pitem.unitprice) + "</div>";
     html += "<div style='margin-top: 20px;'>" + pitem.brandname + "</div></td>";
     html += "</tr></table>";
     html += " <div class='panel-heading' style='margin-top: -20px'>鞋码</div>";
