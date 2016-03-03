@@ -60,6 +60,7 @@
   <ItemGroup>
     <Content Include="css\iscroll.css" />
     <Content Include="image\default.png" />
+    <Content Include="image\pull-icon%402x.png" />
     <Content Include="index.html" />
     <Content Include="js\product.js" />
     <Content Include="lib\artDialog4.1.7\artDialog.js" />
