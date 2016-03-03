@@ -49,7 +49,7 @@ body {
 
 #wrapper {
 	position:absolute; z-index:1;
-	top:59px; bottom:48px; left:-9999px;
+	top:80px; bottom:48px; left:-9999px;
 	width:100%;
 	/*background:#aaa;*/
 	overflow:auto;
