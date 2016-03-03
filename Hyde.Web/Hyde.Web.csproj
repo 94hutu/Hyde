@@ -58,6 +58,7 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Content Include="css\iscroll.css" />
     <Content Include="image\default.png" />
     <Content Include="index.html" />
     <Content Include="js\product.js" />
@@ -219,6 +220,7 @@
     <Content Include="lib\bootstrap\css\bootstrap-theme.min.css" />
     <Content Include="lib\bootstrap\fonts\glyphicons-halflings-regular.svg" />
     <Content Include="lib\bootstrap\js\npm.js" />
+    <Content Include="lib\iscroll\iscroll.js" />
     <Content Include="lib\jPaginate\smartpaginator.css" />
     <Content Include="lib\jPaginate\smartpaginator.js" />
     <Content Include="js\login.js" />

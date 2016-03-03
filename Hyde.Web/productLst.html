@@ -9,24 +9,26 @@
     <meta name="author" content="">
 
     <link rel="stylesheet" type="text/css" href="lib/bootstrap/css/bootstrap.css">
+    <link rel="stylesheet" type="text/css" href="css/iscroll.css">
     <!--    <link rel="stylesheet" type="text/css" href="stylesheets/theme.css">
     <link rel="stylesheet" href="lib/font-awesome/css/font-awesome.css">-->
     <script src="lib/jquery-1.11.3.min.js" type="text/javascript"></script>
     <script src="lib/bootstrap/js/bootstrap.js" type="text/javascript"></script>
+    <script src="lib/iscroll/iscroll.js" type="text/javascript"></script>
     <script src="js/product.js" type="text/javascript"></script>
 </head>
 <body>
     <div class="container-fluid">
-        <div class="navbar  navbar-header " style="width: 100%;margin:0">
-            <div class="btn-group" style="float: left;width: 7%">
-                <button class="btn btn-default btn-lg dropdown-toggle" type="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" style="margin: 3px 0;padding:0">
+        <div class="navbar  navbar-header " style="width: 100%; margin: 0">
+            <div class="btn-group" style="float: left; width: 7%">
+                <button class="btn btn-default btn-lg dropdown-toggle" type="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" style="margin: 3px 0; padding: 0">
                     <span class="glyphicon glyphicon-align-justify" aria-hidden="true"></span>
                 </button>
                 <ul class="dropdown-menu">
                 </ul>
             </div>
 
-            <input type="search" id="txtLoginName" style="float: left; width: 75%;margin:1px" class="span12 form-control" placeholder="请输入关键词" required autofocus />
+            <input type="search" id="txtLoginName" style="float: left; width: 75%; margin: 1px" class="span12 form-control" placeholder="请输入关键词" required autofocus />
             <button type="button" class="btn btn-default" style="width: 17%" onclick="searchGo();">
                 <span class="glyphicon glyphicon-search" aria-hidden="true">搜索</span>
             </button>
@@ -39,49 +41,56 @@
                 女款
             </button>
         </div>
-        <div>
-            <div class="panel panel-default">
-                <div class="panel-body">
-                    <div class="row">
-                        <table class="table" style='border-bottom:solid #808080'>
-                            <tr>
-                                <td><a href="#" class="thumbnail">
-                                    <img src="image/default.png" alt="...">
-                                </a></td>
-                                <td colspan="2">
-                                    <div style='float: left;color:red'>￥699</div>
-                                    <div style='float: right'>吊牌价：￥999</div>
-                                    <div style='margin-top: 20px;'>疯狂十分深刻反思反思翻开手机发送方式加大开发建设的反思反思反思地方反对反对反对法</div>
-                                </td>
-                            </tr>
-                        </table>
-                        <div class="panel-heading" style='margin-top: -20px'>鞋码</div>
-                        <table class="table">
-                            <tr>
-                                <td>尺码</td>
-                                <td>38</td>
-                                <td>38</td>
-                                <td>38</td>
-                                <td>38</td>
-                                <td>38</td>
-                                <td>38</td>
-                            </tr>
-                            <tr>
-                                <td>数量</td>
-                                <td>2</td>
-                                <td>2</td>
-                                <td>2</td>
-                                <td>2</td>
-                                <td>2</td>
-                                <td>2</td>
-                            </tr>
-                        </table>
-                    </div>
+        <div class="panel panel-default">
 
+            <div id="wrapper">
+                <div id="scroller">
+                    <div id="pullDown">
+                        <span class="pullDownIcon"></span><span class="pullDownLabel">下拉刷新...</span>
+                    </div>
+                    <div class="panel-body">
+                        <div class="row">
+                            <table class="table" style='border-bottom: solid #808080'>
+                                <tr>
+                                    <td><a href="#" class="thumbnail">
+                                        <img src="image/default.png" alt="...">
+                                    </a></td>
+                                    <td colspan="2">
+                                        <div style='float: left; color: red'>￥699</div>
+                                        <div style='float: right'>吊牌价：￥999</div>
+                                        <div style='margin-top: 20px;'>疯狂十分深刻反思反思翻开手机发送方式加大开发建设的反思反思反思地方反对反对反对法</div>
+                                    </td>
+                                </tr>
+                            </table>
+                            <div class="panel-heading" style='margin-top: -20px'>鞋码</div>
+                            <table class="table">
+                                <tr>
+                                    <td>尺码</td>
+                                    <td>38</td>
+                                    <td>38</td>
+                                    <td>38</td>
+                                    <td>38</td>
+                                    <td>38</td>
+                                    <td>38</td>
+                                </tr>
+                                <tr>
+                                    <td>数量</td>
+                                    <td>2</td>
+                                    <td>2</td>
+                                    <td>2</td>
+                                    <td>2</td>
+                                    <td>2</td>
+                                    <td>2</td>
+                                </tr>
+                            </table>
+                        </div>
+                    </div>
+                    <div id="pullUp">
+                        <span class="pullUpIcon"></span><span class="pullUpLabel">上拉加载更多...</span>
+                    </div>
                 </div>
             </div>
         </div>
-
     </div>
 </body>
 </html>
